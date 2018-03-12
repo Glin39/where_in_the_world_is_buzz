@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset='utf-8' />
+    <title>Where in the world is Buzz</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Mono" media="all" /></head>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>
+<a-sky src="puydesancy.jpg" rotation="0 -130 0" material="" geometry=""></a-sky>
+<a-text font="kelsonsans" value="Puy de Sancy, France" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text>
+</a-scene>
+
+
+</body></html>
+<style>
+#map {
+    position: fixed;
+    width:50%;
+}
+#features {
+    width: 50%;
+    margin-left: 50%;
+    font-family: sans-serif;
+    overflow-y: scroll;
+    background-color: #fafafa;
+}
+section {
+    padding:  25px 50px;
+    line-height: 20px;
+    border-bottom: 1px solid #ddd;
+    opacity: 0.25;
+    font-size: 13px;
+}
+section.active {
+    opacity: 1;
+}
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 700px;
+}
+</style>
+
+<div id='map'></div>
+<div id='features'>
+    <section id='klaus' class='active'>
+        <h3>China</h3>
+        <p> Learn more on campus: Contact Chinese Student Association-> https://www.facebook.com/gatechcsa/</p>
+    </section>
+    <section id='fuller'>
+        <h3>Mexico</h3>
+        <p> Learn more on campus: Society of Hispanic Professional Engineers -> https://www.facebook.com/groups/gtshpe/</p>
+    </section>
+    <section id='ic'>
+        <h3>Brazil</h3>
+        <p> Learn more on campus: Contact president of Brazilian Student Association -> msilveira6@gatech.edu</p>
+    </section>
+    <section id='west-arch'>
+        <h3>South Korea</h3>
+        <p> Learn more on campus: Korean Undergradate Student Association -> https://www.facebook.com/groups/gtkusa/about/</p>
+    </section>
+    <section id='lib'>
+        <h3>Indonesia</h3>
+        <p> Learn more on campus: Indonesian Student Association -> https://www.facebook.com/isa.gatech/</p>
+    </section>
+    <section id='pettit'>
+        <h3>Iran</h3>
+        <p> Learn more on campus: Iran Student Association -> https://orgsync.com/136447/chapter</p>
+    </section>
+    <section id='mason'>
+        <h3>Pakistan</h3>
+        <p> Learn more on campus: Pakistani Student Association -> http://www.psa.gtorg.gatech.edu/</p>
+    </section>
+    <section id='culc'>
+        <h3>Vietnam</h3>
+        <p> Learn more on campus: Vietnamese Student Association -> https://www.facebook.com/gatechvsa/</p>
+    </section>
+    <section id='howey'>
+        <h3>Turkey</h3>
+        <p> Learn more on campus: Turkish Student Association -> http://www.tso.gtorg.gatech.edu/</p>
+    </section>
+    <section id='dr'>
+        <h3>Dominican Republic</h3>
+        <p> Learn more on campus: Carribbean Student Association -> https://www.facebook.com/gt.caribsa</p>
+    </section>
+</div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ2xpbjM5IiwiYSI6ImNqZHVqbWJ2MzNkM3UzM280NTNkc2JuYzgifQ.O1Boaam0l0270RkqltEupQ';
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [-84.396, 33.7772],
+    zoom: 17.9,
+    bearing: 27,
+    pitch: 45
+});
+
+var chapters = {
+    'klaus': {
+        bearing: 27,
+        center: [-84.396, 33.7772],
+        zoom: 17.9,
+        pitch: 20
+    },
+    'fuller': {
+        bearing: 90,
+        center: [-84.4013, 33.7775],
+        zoom: 18.2,
+        pitch: 20
+    },
+    'ic': {
+        bearing: 90,
+        center: [-84.4013, 33.7755],
+        zoom: 19,
+        pitch: 20
+    },
+    'west-arch': {
+        duration: 6000,
+        center: [-84.396, 33.7762],
+        bearing: 150,
+        zoom: 19,
+        pitch: 0
+    },
+     'lib': {
+        bearing: 90,
+        center: [-84.3957, 33.7744],
+        zoom: 19
+    },
+    'pettit': {
+        bearing: 45,
+        center: [-84.3973, 33.7766],
+        zoom: 19,
+        pitch: 20,
+        speed: 0.5
+    },
+    'mason': {
+        bearing: 180,
+        center: [-84.3987266, 33.7767],
+        zoom: 19
+    },
+    'culc': {
+        bearing: 90,
+        center: [-84.3964, 33.7746],
+        zoom: 18.6,
+        speed: 0.6,
+        pitch: 40
+    },
+    'howey': {
+        bearing: 90,
+        center: [-84.3987266, 33.7775],
+        zoom: 19,
+        pitch: 40
+    },
+    'dr': {
+        bearing: 90,
+        center: [-84.4007, 33.7771],
+        zoom: 19,
+        pitch: 20
+    },
+};
+
+// On every scroll event, check which element is on screen
+window.onscroll = function() {
+    var chapterNames = Object.keys(chapters);
+    for (var i = 0; i < chapterNames.length; i++) {
+        var chapterName = chapterNames[i];
+        if (isElementOnScreen(chapterName)) {
+            setActiveChapter(chapterName);
+            break;
+        }
+    }
+};
+
+var activeChapterName = 'klaus';
+function setActiveChapter(chapterName) {
+    if (chapterName === activeChapterName) return;
+
+    map.flyTo(chapters[chapterName]);
+
+    document.getElementById(chapterName).setAttribute('class', 'active');
+    document.getElementById(activeChapterName).setAttribute('class', '');
+
+    activeChapterName = chapterName;
+}
+
+function isElementOnScreen(id) {
+    var element = document.getElementById(id);
+    var bounds = element.getBoundingClientRect();
+    return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+
+// Add geolocate control to the map.
+map.addControl(new mapboxgl.GeolocateControl({
+    positionOptions: {
+        enableHighAccuracy: true
+    },
+    trackUserLocation: true
+
+}));
+
+</script>
+
+</body>
+</html>
+
+host it
