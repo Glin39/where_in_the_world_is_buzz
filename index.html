@@ -83,29 +83,29 @@
     <div id="MapLayer" class="mapClass active activeList">
          <div id='map'></div></div>
      <div id="buttonMenu" class="showMenu">
-         <button id="China" onclick="setAframe(China)">China</button>
-         <button id="Mexico" onclick="setAframe(Mexico)">Mexico</button>
-         <button id="Brazil" onclick="setAframe(Brazil)">Brazil</button>
-         <button id="Korea" onclick="setAframe(Korea)">Korea</button>
-         <button id="Indonesia" onclick="setAframe(Indonesia)">Indonesia</button>
-         <button id="Iran" onclick="setAframe(Iran)">Iran</button>
-         <button id="Pakistan" onclick="setAframe(Pakistan)">Pakistan</button>
-         <button id="Vietnam" onclick="setAframe(Vietnam)">Vietnam</button>
-         <button id="Turkey" onclick="setAframe(Turkey)">Turkey</button>
-         <button id="DominicanRepublic" onclick="setAframe(DominicanRepublic)">Dominican Republic</button>
+         <button id="China" onclick="setAframe(aframeContent)">China</button>
+         <button id="Mexico" onclick="setAframe(aframeContent1)">Mexico</button>
+         <button id="Brazil" onclick="setAframe(aframeContent2)">Brazil</button>
+         <button id="Korea" onclick="setAframe(aframeContent3)">Korea</button>
+         <button id="Indonesia" onclick="setAframe(aframeContent4)">Indonesia</button>
+         <button id="Iran" onclick="setAframe(aframeContent5)">Iran</button>
+         <button id="Pakistan" onclick="setAframe(aframeContent6)">Pakistan</button>
+         <button id="Vietnam" onclick="setAframe(aframeContent7)">Vietnam</button>
+         <button id="Turkey" onclick="setAframe(aframeContent8)">Turkey</button>
+         <button id="DominicanRepublic" onclick="setAframe(aframeContent9)">Dominican Republic</button>
      </div>
 </body></html>
 <script>
-    var China = ' <a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="China.png" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="China" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
-    var Mexico = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Mexico.png" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Mexico" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
-    var Brazil = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Brazil1.jpg" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Brazil" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
-    var Korea = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Korea.png" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Korea" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
-    var Indonesia = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Indonesia.png" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Indonesia" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
-    var Iran = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Iran.jpg" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Iran" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
-    var Pakistan = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Pakistan.jpg" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Pakistan" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
-    var Vietnam = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Vietnam.png" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Vietnam" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
-    var Turkey = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Turkey.png" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Turkey" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
-    var DominicanRepublic = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="DominicanRepublic.png" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Dominican Republic" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
+    var aframeContent = ' <a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="China.png" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="China" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
+    var aframeContent1 = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Mexico.png" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Mexico" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
+    var aframeContent2 = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Brazil1.jpg" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Brazil" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
+    var aframeContent3 = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Korea.png" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Korea" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
+    var aframeContent4 = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Indonesia.png" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Indonesia" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
+    var aframeContent5 = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Iran.jpg" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Iran" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
+    var aframeContent6 = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Pakistan.jpg" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Pakistan" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
+    var aframeContent7 = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Vietnam.png" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Vietnam" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
+    var aframeContent8 = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="Turkey.png" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Turkey" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
+    var aframeContent9 = '<a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>  <a-sky src="DominicanRepublic.png" rotation="0 -130 0" material="" geometry=""></a-sky><a-text font="kelsonsans" value="Dominican Republic" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text=""></a-text></a-scene>';
 
     function setAframe (myContent) {
   		document.getElementById('aframeContent').innerHTML = myContent;
@@ -144,9 +144,33 @@ map.on('click', function(e) {
   }
 
   var feature = features[0];
+  buildingName = "" + feature.properties.Country;
+  console.log (buildingName);
 
-  var content = new String(feature.properties.Country);
-  setAframe(content)
+  if (buildingName == "Mexico") {
+      setAframe(aframeContent1);
+  } else if (buildingName == "Brazil") {
+      setAframe(aframeContent2);
+  } else if (buildingName == "Korea") {
+      setAframe(aframeContent3);
+  } else if (buildingName == "Indonesia") {
+      setAframe(aframeContent4);
+  } else if (buildingName == "Iran") {
+      setAframe(aframeContent5);
+  } else if (buildingName == "Pakistan") {
+      setAframe(aframeContent6);
+  } else if (buildingName == "Vietnam") {
+      setAframe(aframeContent7);
+  } else if (buildingName == "Turkey") {
+      setAframe(aframeContent8);
+  } else if (buildingName == "DominicanRepublic") {
+      setAframe(aframeContent9);
+  } else {
+    setAframe(aframeContent);
+  }
+
+  //var content = new String(feature.properties.Country);
+  //setAframe(content)
 });
 
 </script>
